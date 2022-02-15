@@ -12,7 +12,7 @@
   </test> <!-- Test -->
   <test  name="Testing login page">
     <classes>
-      <class name="com.qa.opencart.tests.LoginpageTest"/>
+      <class name="com.qa.opencart.tests.Loginpagetest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
