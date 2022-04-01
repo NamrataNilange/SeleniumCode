@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
+<suite name="Suite" thread-count="3" verbose = "4">
 <listeners>	
 		<listener
 			class-name="com.qa.opencart.listeners.ExtentReportListener" />		
 	</listeners>
-  <test  name="Test">
+<!--  <test  name="Test">
     <classes>
       <class name="com.qa.opencart.tests.RegistrationpageTest"/>
     </classes>
-  </test> <!-- Test -->
+  </test> --><!-- Test -->
   <test  name="Testing login page">
     <classes>
       <class name="com.qa.opencart.tests.Loginpagetest"/>
+    </classes>
+   </test> <!-- Test -->
+    <test  name="Testing product page page">
+    <classes>
+      <class name="com.qa.opencart.tests.ProductPageTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

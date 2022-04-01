@@ -29,6 +29,15 @@ public class ElementUtils {
 		
 		
 	}
+	public List<WebElement> getListData(By Locator) {
+		//driver.manage(
+		return driver.findElements(Locator);
+	}
+	
+//	clear the input area
+	public void clearTheInputText(By locator) {
+		driver.findElement(locator).clear();
+	}
 /*****alert util class ****/
 	public  void getData(List<WebElement> elements,WebDriver driver) throws InterruptedException  {
 		//getDriver(driver);
