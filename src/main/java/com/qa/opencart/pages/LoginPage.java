@@ -3,13 +3,11 @@ package com.qa.opencart.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import com.qa.opencart.driverFactory.DriverFactory;
-
 public class LoginPage {
 
 	 WebDriver driver;
 	 ElementUtils eleUtil;
-	 DriverFactory df;
+	 //DriverFactory df;
 	
 	
 	public LoginPage(WebDriver driver) {
@@ -22,6 +20,8 @@ public class LoginPage {
 	private By pass = By.name("password");
 	private By btn = By.xpath("//input[@type = 'submit']");
 	private By registerLink = By.linkText("Register");
+	private String username = "naveenanimation20@gmail.com";
+	private String password = "Selenium12345";
 	
 	public void loginMethod(String userName,String password) {
 		eleUtil.getElementdata(emailid,userName);	
@@ -46,4 +46,18 @@ public class LoginPage {
 		eleUtil.getElement(registerLink).click();
 		return new RegistrationPage(driver);
 	}
+	
+	public AccountPage checkSearchFunctionality() {
+		loginMethod( username, password);
+		return new AccountPage(driver);
+	}
+	
+	public HomePage homePageMethod() {
+		eleUtil.getElementdata(emailid,username);	
+		eleUtil.getElementdata(pass,password);
+		eleUtil.getElementClick(btn);
+		return new HomePage(driver);
+	}
+	
+	
 }
