@@ -39,7 +39,7 @@ public class ElementUtils {
 		driver.findElement(locator).clear();
 	}
 /*****alert util class ****/
-	public  void getData(List<WebElement> elements,WebDriver driver) throws InterruptedException  {
+	public  void getData(List<WebElement> elements,WebDriver driver)   {
 		//getDriver(driver);
 		for(WebElement e : elements)
 		{
@@ -49,7 +49,7 @@ public class ElementUtils {
 				break;
 			}		
 		}
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		Alert alert = driver.switchTo().alert();
 		String alertext = alert.getText();
 		System.out.println(alertext);
@@ -97,6 +97,10 @@ public class ElementUtils {
 		return driver.getTitle();
 				
 			}
+	
+	public String getText(By locator) {
+		return driver.findElement(locator).getText();
+	}
 		
 		
 	

@@ -8,6 +8,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import io.qameta.allure.Step;
+
 public class ProductPage {
 	ElementUtils eUtil;
 	
@@ -55,6 +57,7 @@ public class ProductPage {
 		}
 		//eUtil.getListData
 	}
+	@Step("Getting click on cart step from the Productpage class")
 	public Boolean clickOnCart() {
 		clickProductName();
 		
