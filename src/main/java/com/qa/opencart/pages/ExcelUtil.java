@@ -36,8 +36,10 @@ public class ExcelUtil {
 		 for(int i =0 ; i<sheet.getLastRowNum();i++) {
 			 for(int j=0; j<sheet.getRow(0).getLastCellNum();j++) {
 				 data[i][j] = sheet.getRow(i+1).getCell(j).toString();
+				 System.out.println("two dimensinal data in for loop -" +data[i][j]);
 			 }
 		 }
+		 //System.out.println("two dimensinal data -" );
 		 return data;
 		
 		

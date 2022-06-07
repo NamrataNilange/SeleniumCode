@@ -6,13 +6,18 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+
 public class ProductPageTest extends BaseTest{
 	@BeforeClass
 	public void gotoAccountPage() {
 		aP = lp.checkSearchFunctionality();
 		//productpage = aP.goToProductPage();
 	}
-	
+	@Description("ProductPage click on cart test")
+	@Severity(SeverityLevel.MINOR)
 	@Test
 	public void doTestProdcuctPage() {
 		//lp.loginMethod(prop.getProperty("username"), prop.getProperty("password"));
@@ -21,6 +26,9 @@ public class ProductPageTest extends BaseTest{
 		//productpage.clickOnCart();
 		Assert.assertTrue(productpage.clickOnCart());
 	}
+	
+	@Description("ProductPage check the hashmap content")
+	@Severity(SeverityLevel.NORMAL)
 	@Test
 	public void testProductInfoOfProductPage() {
 		aP.clearTheInputTextArea();

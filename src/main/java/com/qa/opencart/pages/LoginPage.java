@@ -3,6 +3,10 @@ package com.qa.opencart.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import io.qameta.allure.Step;
+import io.qameta.allure.Story;
+
+@Story("Story ID: 1001 Loginpage class")
 public class LoginPage {
 
 	 WebDriver driver;
@@ -23,6 +27,8 @@ public class LoginPage {
 	private String username = "naveenanimation20@gmail.com";
 	private String password = "Selenium12345";
 	
+	
+	@Step("First method to login in with username:{0} and password:{1}")
 	public void loginMethod(String userName,String password) {
 		eleUtil.getElementdata(emailid,userName);	
 		eleUtil.getElementdata(pass,password);
